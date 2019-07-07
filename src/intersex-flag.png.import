@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/intersex-flag.png-48f8e8c8a3c66d77ddb30a41b50edd8b.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://intersex-flag.png"
+dest_files=[ "res://.import/intersex-flag.png-48f8e8c8a3c66d77ddb30a41b50edd8b.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

@@ -1,30 +1,53 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Person.gd" type="Script" id=1]
-[ext_resource path="res://playerGrey_walk1.png" type="Texture" id=2]
-[ext_resource path="res://playerGrey_walk2.png" type="Texture" id=3]
+[ext_resource path="res://standing.png" type="Texture" id=2]
+[ext_resource path="res://Walking/frame0000.png" type="Texture" id=3]
+[ext_resource path="res://Walking/frame0001.png" type="Texture" id=4]
+[ext_resource path="res://Walking/frame0002.png" type="Texture" id=5]
+[ext_resource path="res://Walking/frame0003.png" type="Texture" id=6]
+[ext_resource path="res://Walking/frame0004.png" type="Texture" id=7]
+[ext_resource path="res://Walking/frame0005.png" type="Texture" id=8]
+[ext_resource path="res://Walking/frame0006.png" type="Texture" id=9]
+[ext_resource path="res://Walking/frame0007.png" type="Texture" id=10]
+[ext_resource path="res://Walking/frame0008.png" type="Texture" id=11]
+[ext_resource path="res://Walking/frame0009.png" type="Texture" id=12]
+[ext_resource path="res://Walking/frame0010.png" type="Texture" id=13]
+[ext_resource path="res://Walking/frame0011.png" type="Texture" id=14]
+[ext_resource path="res://Walking/frame0012.png" type="Texture" id=15]
+[ext_resource path="res://Walking/frame0013.png" type="Texture" id=16]
+[ext_resource path="res://Walking/frame0014.png" type="Texture" id=17]
+[ext_resource path="res://Walking/frame0015.png" type="Texture" id=18]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "stand",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
 "loop": true,
 "name": "walk",
-"speed": 5.0
+"speed": 13.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
-radius = 56.4754
+radius = 30.922
 height = 21.4427
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
 script = ExtResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -0.331253, 0 )
 frames = SubResource( 1 )
-animation = "walk"
+animation = "stand"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 358.103, 0 )
+rotating = true
 current = true
